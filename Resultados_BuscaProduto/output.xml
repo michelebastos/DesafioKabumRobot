@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.8 on win32)" generated="20221024 15:00:09.200" rpa="false" schemaversion="3">
+<suite id="s1" name="buscaProduto testes" source="C:\Users\USER\OneDrive\Documentos\ProjetosRobotFramework\DesafioKabum\Testes\buscaProduto_testes.robot">
+<test id="s1-t1" name="Valida busca do produto iphone" line="9">
+<kw name="Abrir o navegador" library="buscaProduto_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 15:00:09.423" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221024 15:00:09.422" endtime="20221024 15:00:10.524"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 15:00:10.524" endtime="20221024 15:00:10.639"/>
+</kw>
+<status status="PASS" starttime="20221024 15:00:09.422" endtime="20221024 15:00:10.639"/>
+</kw>
+<kw name="Given que acesse o site &quot;https://kabum.com.br&quot;" library="buscaProduto_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221024 15:00:10.642" level="INFO">Opening url 'https://kabum.com.br'</msg>
+<status status="PASS" starttime="20221024 15:00:10.641" endtime="20221024 15:00:15.488"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=linkLoginHeader</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:00:15.489" endtime="20221024 15:00:15.533"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Entendi')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:00:15.534" level="INFO">Clicking element '//button[contains(.,'Entendi')]'.</msg>
+<status status="PASS" starttime="20221024 15:00:15.533" endtime="20221024 15:00:15.803"/>
+</kw>
+<status status="PASS" starttime="20221024 15:00:10.641" endtime="20221024 15:00:15.803"/>
+</kw>
+<kw name="Then realizar a busca pelo produto &quot;iphone&quot;" library="buscaProduto_resources" sourcename="realizar a busca pelo produto &quot;${PRODUTO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=input-busca</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:00:15.804" endtime="20221024 15:00:16.131"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=input-busca</arg>
+<arg>text=${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 15:00:16.132" level="INFO">Typing text 'iphone' into text field 'input-busca'.</msg>
+<status status="PASS" starttime="20221024 15:00:16.132" endtime="20221024 15:00:16.232"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[contains(@class,'sc-dPyBCJ sc-ehmTmK bRbOJq iAKqAR')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:00:16.232" level="INFO">Clicking element '//button[contains(@class,'sc-dPyBCJ sc-ehmTmK bRbOJq iAKqAR')]'.</msg>
+<status status="PASS" starttime="20221024 15:00:16.232" endtime="20221024 15:00:20.761"/>
+</kw>
+<status status="PASS" starttime="20221024 15:00:15.804" endtime="20221024 15:00:20.761"/>
+</kw>
+<kw name="Then deverá exibir na listagem o produto &quot;iphone&quot;" library="buscaProduto_resources">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${URL_IPHONE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221024 15:00:20.765" level="FAIL">Variable '${URL_IPHONE}' not found.</msg>
+<status status="FAIL" starttime="20221024 15:00:20.762" endtime="20221024 15:00:20.765"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//h1[contains(.,'iPhone')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221024 15:00:20.765" endtime="20221024 15:00:20.765"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator=${MENU_CATEGORIAS_BUSCA}</arg>
+<arg>expected=IPhone</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20221024 15:00:20.765" endtime="20221024 15:00:20.765"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator=${ELEMENTO_NAVEGACAO}</arg>
+<arg>expected=IPhone</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20221024 15:00:20.766" endtime="20221024 15:00:20.766"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>locator=${ELEMENTO_LISTA}</arg>
+<arg>expected=iPhone</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20221024 15:00:20.766" endtime="20221024 15:00:20.766"/>
+</kw>
+<status status="FAIL" starttime="20221024 15:00:20.762" endtime="20221024 15:00:20.767"/>
+</kw>
+<kw name="Fechar o navegador" library="buscaProduto_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221024 15:00:21.127" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221024 15:00:20.772" endtime="20221024 15:00:21.127"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221024 15:00:21.127" endtime="20221024 15:00:23.286"/>
+</kw>
+<status status="PASS" starttime="20221024 15:00:20.770" endtime="20221024 15:00:23.287"/>
+</kw>
+<status status="FAIL" starttime="20221024 15:00:09.421" endtime="20221024 15:00:23.287">Variable '${URL_IPHONE}' not found.</status>
+</test>
+<doc>Essa suite teste do site kabum valida a busca de um produto</doc>
+<status status="FAIL" starttime="20221024 15:00:09.201" endtime="20221024 15:00:23.290"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="buscaProduto testes">buscaProduto testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

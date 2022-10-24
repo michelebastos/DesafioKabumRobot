@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.8 on win32)" generated="20221024 15:06:26.591" rpa="false" schemaversion="3">
+<suite id="s1" name="adicionaNoCarrinho testes" source="C:\Users\USER\OneDrive\Documentos\ProjetosRobotFramework\DesafioKabum\Testes\adicionaNoCarrinho_testes.robot">
+<test id="s1-t1" name="Valida adição de produto no carrinho" line="9">
+<kw name="Abrir o navegador" library="adicionaNoCarrinho_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 15:06:26.820" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221024 15:06:26.820" endtime="20221024 15:06:28.062"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 15:06:28.062" endtime="20221024 15:06:28.182"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:26.819" endtime="20221024 15:06:28.182"/>
+</kw>
+<kw name="Given que acesse o site &quot;https://kabum.com.br&quot;" library="adicionaNoCarrinho_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221024 15:06:28.185" level="INFO">Opening url 'https://kabum.com.br'</msg>
+<status status="PASS" starttime="20221024 15:06:28.185" endtime="20221024 15:06:31.270"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=linkLoginHeader</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:31.270" endtime="20221024 15:06:31.329"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Entendi')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:31.329" level="INFO">Clicking element '//button[contains(.,'Entendi')]'.</msg>
+<status status="PASS" starttime="20221024 15:06:31.329" endtime="20221024 15:06:31.554"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:28.184" endtime="20221024 15:06:31.554"/>
+</kw>
+<kw name="When selecione uma categoria no menu de “Departamento”" library="adicionaNoCarrinho_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//span[contains(.,'DEPARTAMENTOS')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:31.556" level="INFO">Clicking element '//span[contains(.,'DEPARTAMENTOS')]'.</msg>
+<status status="PASS" starttime="20221024 15:06:31.556" endtime="20221024 15:06:31.847"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//a[@class='sc-TRNrF iCIdkt itemCategoriaMenu'][contains(.,'Games')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:31.848" endtime="20221024 15:06:32.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[@class='sc-TRNrF iCIdkt itemCategoriaMenu'][contains(.,'Games')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:32.632" level="INFO">Clicking element '//a[@class='sc-TRNrF iCIdkt itemCategoriaMenu'][contains(.,'Games')]'.</msg>
+<status status="PASS" starttime="20221024 15:06:32.631" endtime="20221024 15:06:34.946"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//a[@href='https://www.kabum.com.br/gamer/playstation']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:34.946" endtime="20221024 15:06:34.965"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[@href='https://www.kabum.com.br/gamer/playstation']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:34.965" level="INFO">Clicking element '//a[@href='https://www.kabum.com.br/gamer/playstation']'.</msg>
+<status status="PASS" starttime="20221024 15:06:34.965" endtime="20221024 15:06:37.164"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${URL_PS}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221024 15:06:37.172" level="INFO">Current location is 'https://www.kabum.com.br/gamer/playstation'.</msg>
+<status status="PASS" starttime="20221024 15:06:37.164" endtime="20221024 15:06:37.172"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:31.555" endtime="20221024 15:06:37.172"/>
+</kw>
+<kw name="And adicione um produto no carrinho" library="adicionaNoCarrinho_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//img[contains(@title,'Console Sony PlayStation 5 Edição Digital + FIFA 23')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:37.173" endtime="20221024 15:06:37.205"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//img[contains(@title,'Console Sony PlayStation 5 Edição Digital + FIFA 23')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:37.205" level="INFO">Clicking element '//img[contains(@title,'Console Sony PlayStation 5 Edição Digital + FIFA 23')]'.</msg>
+<status status="PASS" starttime="20221024 15:06:37.205" endtime="20221024 15:06:38.358"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@class='sc-8b813326-0 hUMrjh'][contains(.,'COMPRAR')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:38.359" level="INFO">Clicking element '//button[@class='sc-8b813326-0 hUMrjh'][contains(.,'COMPRAR')]'.</msg>
+<status status="PASS" starttime="20221024 15:06:38.358" endtime="20221024 15:06:38.821"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//strong[contains(.,'PRODUTO ADICIONADO NO CARRINHO')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:38.821" endtime="20221024 15:06:40.776"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:37.172" endtime="20221024 15:06:40.777"/>
+</kw>
+<kw name="Then deverá exibir produto incluso no carrinho de compras" library="adicionaNoCarrinho_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${BTN_IR_PARA_O_CARRINHO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:40.777" endtime="20221024 15:06:41.690"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${BTN_IR_PARA_O_CARRINHO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:41.691" level="INFO">Clicking element '//button[@class='sc-f69d9ee4-0 gyvuju buttonGoToCart'][contains(.,'IR PARA O CARRINHO')]'.</msg>
+<status status="PASS" starttime="20221024 15:06:41.691" endtime="20221024 15:06:44.031"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${URL_CARRINHO}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221024 15:06:44.038" level="INFO">Current location is 'https://www.kabum.com.br/carrinho'.</msg>
+<status status="PASS" starttime="20221024 15:06:44.032" endtime="20221024 15:06:44.038"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator=//a[contains(@class,'Name-styles__Name-sc-896612d4-2 idKFQI productName')]</arg>
+<arg>expected=Console Sony PlayStation 5 Edição Digital + FIFA 23</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221024 15:06:44.039" level="INFO">Verifying element '//a[contains(@class,'Name-styles__Name-sc-896612d4-2 idKFQI productName')]' contains exact text 'Console Sony PlayStation 5 Edição Digital + FIFA 23'.</msg>
+<status status="PASS" starttime="20221024 15:06:44.038" endtime="20221024 15:06:44.063"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//input[@class='Quantity-styles__QuantityInput-sc-d6427ac4-4 cHsxPe']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221024 15:06:44.082" level="INFO">Element '//input[@class='Quantity-styles__QuantityInput-sc-d6427ac4-4 cHsxPe']' is displayed.</msg>
+<status status="PASS" starttime="20221024 15:06:44.063" endtime="20221024 15:06:44.082"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator=//p[contains(@class,'Price-sc-5b1fdffd-2 gHaiIN')]</arg>
+<arg>expected=R$ 4.299,90</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221024 15:06:44.083" level="INFO">Verifying element '//p[contains(@class,'Price-sc-5b1fdffd-2 gHaiIN')]' contains exact text 'R$ 4.299,90'.</msg>
+<status status="PASS" starttime="20221024 15:06:44.083" endtime="20221024 15:06:44.105"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:40.777" endtime="20221024 15:06:44.105"/>
+</kw>
+<kw name="Fechar o navegador" library="adicionaNoCarrinho_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221024 15:06:44.223" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221024 15:06:44.106" endtime="20221024 15:06:44.223"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221024 15:06:44.224" endtime="20221024 15:06:46.376"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:44.105" endtime="20221024 15:06:46.377"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:26.818" endtime="20221024 15:06:46.377"/>
+</test>
+<test id="s1-t2" name="Valida carrinho de compras vazio" line="15">
+<kw name="Abrir o navegador" library="adicionaNoCarrinho_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 15:06:46.383" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221024 15:06:46.382" endtime="20221024 15:06:47.528"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 15:06:47.529" endtime="20221024 15:06:47.659"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:46.381" endtime="20221024 15:06:47.659"/>
+</kw>
+<kw name="Given que acesse o site &quot;https://kabum.com.br&quot;" library="adicionaNoCarrinho_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221024 15:06:47.660" level="INFO">Opening url 'https://kabum.com.br'</msg>
+<status status="PASS" starttime="20221024 15:06:47.660" endtime="20221024 15:06:50.750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=linkLoginHeader</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:50.750" endtime="20221024 15:06:50.798"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Entendi')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:50.799" level="INFO">Clicking element '//button[contains(.,'Entendi')]'.</msg>
+<status status="PASS" starttime="20221024 15:06:50.798" endtime="20221024 15:06:51.118"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:47.660" endtime="20221024 15:06:51.118"/>
+</kw>
+<kw name="When acessar o carrinho de compras" library="adicionaNoCarrinho_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=linkCarrinhoHeader</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:51.120" endtime="20221024 15:06:51.186"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=linkCarrinhoHeader</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221024 15:06:51.187" level="INFO">Clicking element 'linkCarrinhoHeader'.</msg>
+<status status="PASS" starttime="20221024 15:06:51.187" endtime="20221024 15:06:51.336"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>url=${URL_CARRINHO}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221024 15:06:53.978" level="INFO">Current location is 'https://www.kabum.com.br/carrinho'.</msg>
+<status status="PASS" starttime="20221024 15:06:51.337" endtime="20221024 15:06:53.978"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:51.119" endtime="20221024 15:06:53.978"/>
+</kw>
+<kw name="Then deverá exibir carrinho de compras vazio" library="adicionaNoCarrinho_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//button[@class='styles__Button-sc-888987f0-0 iUGnTZ'][contains(.,'CONTINUAR COMPRANDO')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221024 15:06:53.979" endtime="20221024 15:06:54.008"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator=//b[contains(.,'O seu carrinho está vazio.')]</arg>
+<arg>expected=O seu carrinho está vazio.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221024 15:06:54.008" level="INFO">Verifying element '//b[contains(.,'O seu carrinho está vazio.')]' contains exact text 'O seu carrinho está vazio.'.</msg>
+<status status="PASS" starttime="20221024 15:06:54.008" endtime="20221024 15:06:54.041"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:53.979" endtime="20221024 15:06:54.041"/>
+</kw>
+<kw name="Fechar o navegador" library="adicionaNoCarrinho_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221024 15:06:54.169" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221024 15:06:54.042" endtime="20221024 15:06:54.169"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221024 15:06:54.169" endtime="20221024 15:06:56.383"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:54.041" endtime="20221024 15:06:56.383"/>
+</kw>
+<status status="PASS" starttime="20221024 15:06:46.380" endtime="20221024 15:06:56.384"/>
+</test>
+<doc>Essa suite teste do site kabum</doc>
+<status status="PASS" starttime="20221024 15:06:26.593" endtime="20221024 15:06:56.385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="adicionaNoCarrinho testes">adicionaNoCarrinho testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
